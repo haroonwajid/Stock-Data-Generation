@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "stocktwitscrapper"
+version = "0.0.1"
+description = ""
+authors = ["keenborder786 <mohammad.mohtashim78@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dotenv = "^1.0.1"
+pandas = "^2.2.2"
+pytz = "^2024.1"
+requests = "^2.31.0"
+pandas-market-calendars = "^4.4.0"
+langchain-openai = "^0.1.7"
+polygon-api-client = "^1.13.7"
+yfinance = "^0.2.40"
+mypy = "^1.10.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.4"
+
+[tool.ruff.lint]
+select = [
+  "E",  # pycodestyle
+  "F",  # pyflakes
+  "I",  # isort
+]
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]
+
+[tool.pytest.ini_options]
+pythonpath = [ "." ]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
